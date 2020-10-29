@@ -1,0 +1,187 @@
+
+81901@DESKTOP-SIIRDF9 MINGW64 ~
+$ cd vagrant
+
+81901@DESKTOP-SIIRDF9 MINGW64 ~/vagrant
+$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'ubuntu/xenial64' version '20200925.0.0' is up to date...
+==> default: A newer version of the box 'ubuntu/xenial64' for provider 'virtualbox' is
+==> default: available! You currently have version '20200925.0.0'. The latest is version
+==> default: '20201014.0.0'. Run `vagrant box update` to update.
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 3000 (guest) => 3000 (host) (adapter 1)
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+    default: Warning: Connection reset. Retrying...
+    default: Warning: Connection aborted. Retrying...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default:
+    default: Guest Additions Version: 5.1.38
+    default: VirtualBox Version: 6.1
+==> default: Mounting shared folders...
+    default: /vagrant => C:/Users/81901/vagrant
+    default: /home/vagrant/workspace => C:/Users/81901/workspace
+==> default: Detected mount owner ID within mount options. (uid: 1000 guestpath: /home/vagrant/workspace)
+==> default: Detected mount group ID within mount options. (gid: 1000 guestpath: /home/vagrant/workspace)
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+
+81901@DESKTOP-SIIRDF9 MINGW64 ~/vagrant
+$ vagrant ssh
+Welcome to Ubuntu 16.04.7 LTS (GNU/Linux 4.4.0-193-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+14 packages can be updated.
+0 updates are security updates.
+
+New release '18.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Thu Oct 29 03:34:41 2020 from 10.0.2.2
+vagrant@ubuntu-xenial:~$ cd workspace
+vagrant@ubuntu-xenial:~/workspace$ cd task7
+vagrant@ubuntu-xenial:~/workspace/task7$ ls
+goya.csv         indicate.rb   test.html.erb
+goya-master.zip  price.csv     test.rb
+goya.rb          sample_pg.rb  ubuntu-xenial-16.04-cloudimg-console.log
+vagrant@ubuntu-xenial:~/workspace/task7$ ruby test.rb
+[2020-10-29 04:44:43] INFO  WEBrick 1.6.1
+[2020-10-29 04:44:43] INFO  ruby 2.6.5 (2019-10-01) [x86_64-linux]
+[2020-10-29 04:44:43] INFO  WEBrick::HTTPServer#start: pid=4247 port=3000
+10.0.2.2 - - [29/Oct/2020:04:44:52 UTC] "GET / HTTP/1.1" 200 2133
+- -> /
+[2020-10-29 04:44:52] ERROR `/favicon.ico' not found.
+10.0.2.2 - - [29/Oct/2020:04:44:52 UTC] "GET /favicon.ico HTTP/1.1" 404 281
+http://localhost:3000/ -> /favicon.ico
+10.0.2.2 - - [29/Oct/2020:04:45:03 UTC] "GET /test.html.erb HTTP/1.1" 200 1955
+http://localhost:3000/ -> /test.html.erb
+^C[2020-10-29 04:49:39] INFO  going to shutdown ...
+[2020-10-29 04:49:39] INFO  WEBrick::HTTPServer#start done.
+vagrant@ubuntu-xenial:~/workspace/task7$
+vagrant@ubuntu-xenial:~/workspace/task7$
+vagrant@ubuntu-xenial:~/workspace/task7$ goya =#
+No command 'goya' found, did you mean:
+ Command 'gosa' from package 'gosa-desktop' (universe)
+goya: command not found
+vagrant@ubuntu-xenial:~/workspace/task7$ exit
+logout
+Connection to 127.0.0.1 closed.
+
+81901@DESKTOP-SIIRDF9 MINGW64 ~/vagrant
+$ goya =#
+bash: goya: command not found
+
+81901@DESKTOP-SIIRDF9 MINGW64 ~/vagrant
+$ vagrant ssh
+Welcome to Ubuntu 16.04.7 LTS (GNU/Linux 4.4.0-193-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+14 packages can be updated.
+0 updates are security updates.
+
+New release '18.04.5 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Thu Oct 29 04:42:53 2020 from 10.0.2.2
+vagrant@ubuntu-xenial:~$ goya=# \dt
+The program 'dt' is currently not installed. To run 'dt' please ask your administrator to install the package 'ditrack'
+vagrant@ubuntu-xenial:~$ goya=# \dt
+The program 'dt' is currently not installed. To run 'dt' please ask your administrator to install the package 'ditrack'
+vagrant@ubuntu-xenial:~$ cd workspace
+vagrant@ubuntu-xenial:~/workspace$ cd Task7
+vagrant@ubuntu-xenial:~/workspace/Task7$ ls
+goya.csv         indicate.rb   test.html.erb
+goya-master.zip  price.csv     test.rb
+goya.rb          sample_pg.rb  ubuntu-xenial-16.04-cloudimg-console.log
+vagrant@ubuntu-xenial:~/workspace/Task7$ ruby test.rb
+[2020-10-29 04:57:33] INFO  WEBrick 1.6.1
+[2020-10-29 04:57:33] INFO  ruby 2.6.5 (2019-10-01) [x86_64-linux]
+[2020-10-29 04:57:33] INFO  WEBrick::HTTPServer#start: pid=4478 port=3000
+10.0.2.2 - - [29/Oct/2020:04:57:40 UTC] "GET /test.html.erb HTTP/1.1" 200 2003
+http://localhost:3000/ -> /test.html.erb
+10.0.2.2 - - [29/Oct/2020:04:57:48 UTC] "POST /goya.cgi HTTP/1.1" 200 178
+http://localhost:3000/test.html.erb -> /goya.cgi
+10.0.2.2 - - [29/Oct/2020:04:57:58 UTC] "POST /goya.cgi HTTP/1.1" 200 158
+http://localhost:3000/test.html.erb -> /goya.cgi
+10.0.2.2 - - [29/Oct/2020:04:58:01 UTC] "POST /goya.cgi HTTP/1.1" 200 178
+http://localhost:3000/test.html.erb -> /goya.cgi
+10.0.2.2 - - [29/Oct/2020:04:58:42 UTC] "GET / HTTP/1.1" 200 2133
+- -> /
+10.0.2.2 - - [29/Oct/2020:04:58:45 UTC] "GET /sample_pg.rb HTTP/1.1" 200 857
+http://localhost:3000/ -> /sample_pg.rb
+10.0.2.2 - - [29/Oct/2020:04:58:50 UTC] "GET /test.html.erb HTTP/1.1" 200 2003
+http://localhost:3000/ -> /test.html.erb
+10.0.2.2 - - [29/Oct/2020:04:58:52 UTC] "POST /goya.cgi HTTP/1.1" 200 178
+http://localhost:3000/test.html.erb -> /goya.cgi
+10.0.2.2 - - [29/Oct/2020:04:58:57 UTC] "POST /goya.cgi HTTP/1.1" 200 178
+http://localhost:3000/test.html.erb -> /goya.cgi
+^C[2020-10-29 05:02:45] INFO  going to shutdown ...
+[2020-10-29 05:02:45] INFO  WEBrick::HTTPServer#start done.
+vagrant@ubuntu-xenial:~/workspace/Task7$ ruby test.rb
+[2020-10-29 05:02:55] INFO  WEBrick 1.6.1
+[2020-10-29 05:02:55] INFO  ruby 2.6.5 (2019-10-01) [x86_64-linux]
+[2020-10-29 05:02:55] INFO  WEBrick::HTTPServer#start: pid=4528 port=3000
+10.0.2.2 - - [29/Oct/2020:05:03:04 UTC] "GET /test.html.erb HTTP/1.1" 200 2101
+http://localhost:3000/ -> /test.html.erb
+10.0.2.2 - - [29/Oct/2020:05:03:07 UTC] "GET /test.html.erb HTTP/1.1" 304 0
+http://localhost:3000/ -> /test.html.erb
+10.0.2.2 - - [29/Oct/2020:05:03:10 UTC] "POST /goya.cgi HTTP/1.1" 200 178
+http://localhost:3000/test.html.erb -> /goya.cgi
+10.0.2.2 - - [29/Oct/2020:05:03:14 UTC] "POST /goya.cgi HTTP/1.1" 200 178
+http://localhost:3000/test.html.erb -> /goya.cgi
+^C[2020-10-29 05:03:44] INFO  going to shutdown ...
+[2020-10-29 05:03:44] INFO  WEBrick::HTTPServer#start done.
+vagrant@ubuntu-xenial:~/workspace/Task7$ ruby test.rb
+[2020-10-29 05:03:55] INFO  WEBrick 1.6.1
+[2020-10-29 05:03:55] INFO  ruby 2.6.5 (2019-10-01) [x86_64-linux]
+[2020-10-29 05:03:55] INFO  WEBrick::HTTPServer#start: pid=4565 port=3000
+10.0.2.2 - - [29/Oct/2020:05:04:10 UTC] "GET / HTTP/1.1" 200 2133
+- -> /
+10.0.2.2 - - [29/Oct/2020:05:04:14 UTC] "GET /test.html.erb HTTP/1.1" 304 0
+http://localhost:3000/ -> /test.html.erb
+^C[2020-10-29 05:05:09] INFO  going to shutdown ...
+[2020-10-29 05:05:09] INFO  WEBrick::HTTPServer#start done.
+vagrant@ubuntu-xenial:~/workspace/Task7$ ruby test.rb
+[2020-10-29 05:05:21] INFO  WEBrick 1.6.1
+[2020-10-29 05:05:21] INFO  ruby 2.6.5 (2019-10-01) [x86_64-linux]
+[2020-10-29 05:05:21] INFO  WEBrick::HTTPServer#start: pid=4602 port=3000
+10.0.2.2 - - [29/Oct/2020:05:05:33 UTC] "GET /test.html.erb HTTP/1.1" 200 2101
+http://localhost:3000/ -> /test.html.erb
+10.0.2.2 - - [29/Oct/2020:05:05:36 UTC] "POST /indicate.cgi HTTP/1.1" 200 122
+http://localhost:3000/test.html.erb -> /indicate.cgi
+10.0.2.2 - - [29/Oct/2020:05:05:39 UTC] "POST /goya.cgi HTTP/1.1" 200 178
+http://localhost:3000/test.html.erb -> /goya.cgi
+10.0.2.2 - - [29/Oct/2020:05:10:40 UTC] "GET /test HTTP/1.1" 200 8727
+- -> /test
+10.0.2.2 - - [29/Oct/2020:05:10:44 UTC] "POST /goya.cgi HTTP/1.1" 200 1548
+http://localhost:3000/test -> /goya.cgi
+10.0.2.2 - - [29/Oct/2020:05:10:48 UTC] "POST /goya.cgi HTTP/1.1" 200 5107
+http://localhost:3000/test -> /goya.cgi
+^A^A^C[2020-10-29 05:13:16] INFO  going to shutdown ...
+[2020-10-29 05:13:16] INFO  WEBrick::HTTPServer#start done.
+vagrant@ubuntu-xenial:~/workspace/Task7$
